@@ -1,0 +1,21 @@
+.container-fluid {
+	color:black;
+	display:flex;
+	flex-direction:row;
+	justify-content:space-around;
+	box-shadow:2px 2px 10px  #ccc;
+	-webkit-box-shadow:2px 2px 10px #ccc;
+	-moz-box-shadow:2px 2px 10px  #ccc;
+}
+}
+.container-fluid a{
+	text-decoration:none;
+	color:black;
+}
+.cart{
+	text-decoration:none;
+	color:#db467f;
+}
+img{
+	margin-top:100px;
+}
