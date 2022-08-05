@@ -74,10 +74,9 @@
   </div>
   </div>
  
-<div class="col-md-4 col-12 ">
+<div class="col-md-3 col-12 ">
 <p class="my-md-4 header-links">
-<a href="login.html" class="px-2">Log In</a>
-<a href="login.html" class="px-2">Sign Up</a>
+<a  onclick="logout()" class="">Log Out</a>
 </p>
 </div>
 </nav>
@@ -676,7 +675,16 @@
 </div>
 </footer>
 
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
 
+<!-- TODO: Add SDKs for Firebase products that you want to use
+    https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-auth.js"></script>
+
+<script src="firebase.js"></script>
+<script src="welcome.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <!-- isotope plugin -->
 <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>

@@ -1,60 +1,68 @@
-    <html>
+<!DOCTYPE html>
+<html lang="en">
     <head>
-    <title> User login and registration</title>
-    <link rel="stylesheet" type="text/css" href="login.css">
-    <!-- font-->
-    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Dancing+Script:wght@500&family=Kaushan+Script&family=Krona+One&family=Pacifico&family=Permanent+Marker&family=Satisfy&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    </head>
-    
-    <body>
-    
-    <header>
-    <div class="container">
-    <div class="col col-12 text-center">
-    <h1 class="heading py-2"><b> Shoppers Stop</b></h1>
-    </div>
-    </div>
-    </header>
-    <main>
-    <div class="container m-auto">
-    <div class="row p-5">
-    
-      <div class="col-md-6 login-left">
-      <h2>Login Here</h2>
-      <div class="form-group"> 
-        <label> Username</lable>
-        <input type="text" name="user" class="form-control" required>
-      </div>
-      <div class="form-group">
-        <label>Password</lable>
-        <input type="password" name="password" class="form-control" required>
-      </div>
-      <button onclick="login()" class="btn btn-primary">Login</button>
-     
-      </div>
-    
-      <div class="col-md-6 login-right">
-        <h2>SignUp Here</h2>
-          <div class="form-group">
-            <label> Email</lable>
-            <input id="email" type="email" name="email" class="form-control" required>
-           </div>
-        <div class="form-group">
-         <label> Username</lable>
-         <input  id="username" type="text" name="user" class="form-control" required>
-        </div>
-        <div class="form-group">
-         <label>Password</lable>
-         <input id="password" type="password" name="password" class="form-control" required>
-        </div>
-        <button onclick="register()" class="btn btn-primary">Register</button>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login/Register</title>
+        <link
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" />
         
-      </div>
-    
-    </div>
-    </div>
-    </main>
-</main>
-</body>
+        <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Dancing+Script:wght@500&family=Kaushan+Script&family=Krona+One&family=Pacifico&family=Permanent+Marker&family=Satisfy&display=swap" rel="stylesheet">
+     
+        <link
+        href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.5.0/mdb.min.css"
+        rel="stylesheet"
+        />
+        <link rel="stylesheet" type="text/css" href="login.css">
+
+
+    </head>
+
+    <body >
+       
+    <header>
+        <div class="container">
+        <div class="col col-12 text-center">
+        <h1 class="heading py-2"><b> Shoppers Stop</b></h1>
+        </div>
+        </div>
+    </header>
+    <div class="d-flex justify-content-center p-5">
+        <div class="card login-right">
+            <div class="card-header">
+                <center><h3>Login / <span style="color:rgb(32, 151, 248);">SignUp</span></h3></center>
+            </div>
+            <form onsubmit="login()" id="loginForm" class="card-body px-5 py-4">
+                <center><small><span id="error" style="color: red"></span></small></center>
+                <div class="form-group"> <label class="custom-field">
+                    <input id="email" type="text" class="form-control" required />
+                    <span class="placeholder">Email Id</span>
+                </label></div> 
+                <div class="form-group"> 
+                <label class="custom-field">
+                    <input id="password" type="password" class="form-control" required />
+                    <span class="placeholder">Password</span>
+                </label></div><br /><br/>
+                
+                <center>
+                    <a href="#" onclick="forgotPass()">Forgot Password ?</a> <br>
+                    <br>
+                    <button type="submit" class="btn btn-primary mx-2">Login</button>
+                    <button onclick="signUp()" class="btn btn-secondary">Sign Up</button>
+                </center>
+            </form>
+        </div>
+        </div>
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
+
+        <!-- TODO: Add SDKs for Firebase products that you want to use
+            https://firebase.google.com/docs/web/setup#available-libraries -->
+        <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-analytics.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-auth.js"></script>
+
+        <script src="firebase.js"></script>
+        <script src="login.js"></script>
+    </body>
 </html>
